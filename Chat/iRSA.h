@@ -1,18 +1,18 @@
-#pragma once
+п»ї#pragma once
 #include "iUInt.h"
 namespace i
 {
 	class iRSA
 	{
-		//простые числа
+		//РїСЂРѕСЃС‚С‹Рµ С‡РёСЃР»Р°
 	public:
 		UInt::iUInt P;
 	public:
 		UInt::iUInt Q;
-		//открытая экспонента
+		//РѕС‚РєСЂС‹С‚Р°СЏ СЌРєСЃРїРѕРЅРµРЅС‚Р°
 	public:
 		UInt::iUInt E;
-		//закрытая экспонента
+		//Р·Р°РєСЂС‹С‚Р°СЏ СЌРєСЃРїРѕРЅРµРЅС‚Р°
 	public:
 		UInt::iUInt D;
 		//P*Q
@@ -29,11 +29,11 @@ namespace i
 		~iRSA(void)
 		{
 		}
-		//является ли случайное число свидетелем простоты числа m
+		//СЏРІР»СЏРµС‚СЃСЏ Р»Рё СЃР»СѓС‡Р°Р№РЅРѕРµ С‡РёСЃР»Рѕ СЃРІРёРґРµС‚РµР»РµРј РїСЂРѕСЃС‚РѕС‚С‹ С‡РёСЃР»Р° m
 	public:
 		static bool IsSvidetel(const UInt::iUInt &m,System::Random^ random,const UInt::iUInt &t,const int &s,UInt::iUInt &a,const UInt::iUInt &m_1)
 		{
-			//генерация a (a<m && a>1)
+			//РіРµРЅРµСЂР°С†РёСЏ a (a<m && a>1)
 			a.Create(m.N);
 			do
 			{
@@ -72,7 +72,7 @@ namespace i
 			}
 			return false;
 		}
-		//генерация одного простого числа и проверка его на простоту
+		//РіРµРЅРµСЂР°С†РёСЏ РѕРґРЅРѕРіРѕ РїСЂРѕСЃС‚РѕРіРѕ С‡РёСЃР»Р° Рё РїСЂРѕРІРµСЂРєР° РµРіРѕ РЅР° РїСЂРѕСЃС‚РѕС‚Сѓ
 	public:
 		static void ProbablyGeneratePrimeNumber(const int &Byte,const int &Round,System::Random^ random,UInt::iUInt &L,const UInt::iUInt &Border)
 		{
@@ -80,7 +80,7 @@ namespace i
 			UInt::iUInt t;
 			int s;
 			int i1;
-			//генерация случайного L: L%2!=0, L>1, L<256^Byte
+			//РіРµРЅРµСЂР°С†РёСЏ СЃР»СѓС‡Р°Р№РЅРѕРіРѕ L: L%2!=0, L>1, L<256^Byte
 			do
 			{
 				for(i1=1;i1<Byte-1;++i1)
@@ -99,7 +99,7 @@ namespace i
 				while(L.VALUE[Byte-1]==0);
 			}
 			while(L.N==0 || (L.N==1 && L.VALUE[0]==1));
-			//проверка на тривиальные делители
+			//РїСЂРѕРІРµСЂРєР° РЅР° С‚СЂРёРІРёР°Р»СЊРЅС‹Рµ РґРµР»РёС‚РµР»Рё
 			UInt::iUInt uint1,uint2,uint3;
 			for(uint3=3;uint3<Border;uint3+=2)
 			{
@@ -134,7 +134,7 @@ namespace i
 			}
 			return;
 		}
-		//генерация простого числа
+		//РіРµРЅРµСЂР°С†РёСЏ РїСЂРѕСЃС‚РѕРіРѕ С‡РёСЃР»Р°
 	public:
 		static void GeneratePrimeNumber(const int &Byte,const int &Round,System::Random^ random,UInt::iUInt &L,const UInt::iUInt &Border)
 		{
@@ -147,7 +147,7 @@ namespace i
 				}
 			}
 		}
-		//генерация P и Q
+		//РіРµРЅРµСЂР°С†РёСЏ P Рё Q
 	public:
 		void GeneratePrimeNumbers(const int &Byte,const int &Round,const UInt::iUInt &Border)
 		{
@@ -155,7 +155,7 @@ namespace i
 			GeneratePrimeNumber(Byte,Round,random,P,Border);
 			GeneratePrimeNumber(Byte,Round,random,Q,Border);
 		}
-		//генерация E и D
+		//РіРµРЅРµСЂР°С†РёСЏ E Рё D
 	public:
 		void GenerateEDKey(System::Random^ random)
 		{
@@ -182,7 +182,7 @@ namespace i
 				GenerateEDKey(random);
 			}
 		}
-		//signed вычитание
+		//signed РІС‹С‡РёС‚Р°РЅРёРµ
 		static void subtract(const UInt::iUInt &a,const UInt::iUInt &b,const bool &sign_a,const bool &sign_b,UInt::iUInt &result,bool &sign_res)
 		{
 			if(sign_a)
@@ -228,7 +228,7 @@ namespace i
 				}
 			}
 		}
-		//расширенный алгоритм евклида
+		//СЂР°СЃС€РёСЂРµРЅРЅС‹Р№ Р°Р»РіРѕСЂРёС‚Рј РµРІРєР»РёРґР°
 		static void NODADV(UInt::iUInt &a,UInt::iUInt &b,UInt::iUInt &x,UInt::iUInt &y)
 		{
 			UInt::iUInt q,r,x1,x2,x3,x4;
@@ -268,7 +268,7 @@ namespace i
 				b=r;
 			}
 		}
-		//зашифровать число
+		//Р·Р°С€РёС„СЂРѕРІР°С‚СЊ С‡РёСЃР»Рѕ
 		UInt::iUInt EncryptValue(const UInt::iUInt &Value)
 		{
 			//N=P*Q;
@@ -276,7 +276,7 @@ namespace i
 			i1.Pow(Value,this->E,this->N);
 			return i1;
 		}
-		//расшифровать число
+		//СЂР°СЃС€РёС„СЂРѕРІР°С‚СЊ С‡РёСЃР»Рѕ
 		UInt::iUInt DecryptValue(const UInt::iUInt &Value)
 		{
 			//N=P*Q;
@@ -284,7 +284,7 @@ namespace i
 			i1.Pow(Value,this->D,this->N);
 			return i1;
 		}
-		//зашифровать неограниченный по длине текст
+		//Р·Р°С€РёС„СЂРѕРІР°С‚СЊ РЅРµРѕРіСЂР°РЅРёС‡РµРЅРЅС‹Р№ РїРѕ РґР»РёРЅРµ С‚РµРєСЃС‚
 		System::String^ EncryptAllText(System::String^ Text)
 		{
 			System::String^ text2="";
@@ -302,7 +302,7 @@ namespace i
 			}
 			return text2;
 		}
-		//зашифровать короткий текст
+		//Р·Р°С€РёС„СЂРѕРІР°С‚СЊ РєРѕСЂРѕС‚РєРёР№ С‚РµРєСЃС‚
 		System::String^ EncryptText(System::String^ Text)
 		{
 			System::String^ text2="";
@@ -328,7 +328,7 @@ namespace i
 			}
 			return text3;
 		}
-		//расшифровать неограниченный по длине текст
+		//СЂР°СЃС€РёС„СЂРѕРІР°С‚СЊ РЅРµРѕРіСЂР°РЅРёС‡РµРЅРЅС‹Р№ РїРѕ РґР»РёРЅРµ С‚РµРєСЃС‚
 		System::String^ DecryptAllText(System::String^ Text)
 		{
 			System::String^ text2="";
@@ -341,7 +341,7 @@ namespace i
 			}
 			return text2;
 		}
-		//расшифровать короткий текст
+		//СЂР°СЃС€РёС„СЂРѕРІР°С‚СЊ РєРѕСЂРѕС‚РєРёР№ С‚РµРєСЃС‚
 		System::String^ DecryptText(System::String^ Text)
 		{
 			UInt::iUInt L1;

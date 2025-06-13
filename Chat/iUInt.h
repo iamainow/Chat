@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 //nonstandard extension used: enum 'enum' used in qualified name
 #pragma warning(disable:4482)
 //'function' : not all control paths return a value
@@ -6,7 +6,7 @@
 //
 namespace i
 {
-	//результат сравнения
+	//СЂРµР·СѓР»СЊС‚Р°С‚ СЃСЂР°РІРЅРµРЅРёСЏ
 	enum Comparing:unsigned __int8
 	{
 		//==
@@ -22,37 +22,37 @@ namespace i
 		//unsigned integer
 		class iUInt
 		{
-			//массив данных
+			//РјР°СЃСЃРёРІ РґР°РЅРЅС‹С…
 		public:
 			unsigned __int8 *VALUE;
-			//размер массива VALUE
+			//СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР° VALUE
 		public:
 			signed __int32 SIZE;
-			//размер используемых данных массива VALUE
-			//после VALUE[N] идут не используемые данные (нули)
+			//СЂР°Р·РјРµСЂ РёСЃРїРѕР»СЊР·СѓРµРјС‹С… РґР°РЅРЅС‹С… РјР°СЃСЃРёРІР° VALUE
+			//РїРѕСЃР»Рµ VALUE[N] РёРґСѓС‚ РЅРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ РґР°РЅРЅС‹Рµ (РЅСѓР»Рё)
 		public:
 			signed __int32 N;
-			//создать число 0
+			//СЃРѕР·РґР°С‚СЊ С‡РёСЃР»Рѕ 0
 		public:
 			void Create(void)
 			{
 				this->N=0;
 			}
-			//создать число с заданным N
+			//СЃРѕР·РґР°С‚СЊ С‡РёСЃР»Рѕ СЃ Р·Р°РґР°РЅРЅС‹Рј N
 		public:
 			void Create(const signed __int32 &N)
 			{
 				this->N=N;
 				this->Create_2(N);
 			}
-			//создать число с заданным N и присвоить всем элементам VALUE число Value
+			//СЃРѕР·РґР°С‚СЊ С‡РёСЃР»Рѕ СЃ Р·Р°РґР°РЅРЅС‹Рј N Рё РїСЂРёСЃРІРѕРёС‚СЊ РІСЃРµРј СЌР»РµРјРµРЅС‚Р°Рј VALUE С‡РёСЃР»Рѕ Value
 		public:
 			void Create(const signed __int32 &N,const unsigned __int8 &Value)
 			{
 				this->N=N;
 				this->Create_2(N,Value);
 			}
-			//создать число с заданным N
+			//СЃРѕР·РґР°С‚СЊ С‡РёСЃР»Рѕ СЃ Р·Р°РґР°РЅРЅС‹Рј N
 		public:
 			void Create_2(const signed __int32 &N)
 			{
@@ -72,14 +72,14 @@ namespace i
 					this->VALUE[i1]=Value;
 				}
 			}
-			//изменить размер массива VALUE
+			//РёР·РјРµРЅРёС‚СЊ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР° VALUE
 		public:
 			void Resize(const signed __int32 &N)
 			{
 				Resize_2(N);
 				this->N=N;
 			}
-			//изменить размер массива VALUE и заменить освободившиеся позиции числом Value
+			//РёР·РјРµРЅРёС‚СЊ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР° VALUE Рё Р·Р°РјРµРЅРёС‚СЊ РѕСЃРІРѕР±РѕРґРёРІС€РёРµСЃСЏ РїРѕР·РёС†РёРё С‡РёСЃР»РѕРј Value
 		public:
 			void Resize(const signed __int32 &N,const unsigned __int8 &Value)
 			{
@@ -110,7 +110,7 @@ namespace i
 					this->VALUE[i1]=Value;
 				}
 			}
-			//копирование
+			//РєРѕРїРёСЂРѕРІР°РЅРёРµ
 		public:
 			void FromUInt(const iUInt &UInt)
 			{
@@ -123,7 +123,7 @@ namespace i
 					}
 				}
 			}
-			//удаление
+			//СѓРґР°Р»РµРЅРёРµ
 		public:
 			void Delete(void)
 			{
@@ -154,7 +154,7 @@ namespace i
 			{
 				this->FromUInt(UInt);
 			}
-			//упрощение this->N
+			//СѓРїСЂРѕС‰РµРЅРёРµ this->N
 		public:
 			void Verify(void)
 			{
@@ -168,7 +168,7 @@ namespace i
 				}
 				this->N=0;
 			}
-			//упращение this->N, начальное значение N
+			//СѓРїСЂР°С‰РµРЅРёРµ this->N, РЅР°С‡Р°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ N
 		public:
 			void Verify(const signed __int32 &N)
 			{
@@ -184,7 +184,7 @@ namespace i
 				this->N=0;
 			}
 			//
-			//операторы преобразования типов
+			//РѕРїРµСЂР°С‚РѕСЂС‹ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ С‚РёРїРѕРІ
 			//
 			//from unsigned
 		public:
@@ -532,7 +532,7 @@ namespace i
 				return static_cast<signed __int64>(this->ToUInt64());
 			}
 			//
-			//сравнение
+			//СЃСЂР°РІРЅРµРЅРёРµ
 			//
 		public:
 			static Comparing Compare(const iUInt &UInt1,const iUInt &UInt2)
@@ -657,7 +657,7 @@ namespace i
 			//
 			//
 			//
-			//в строку вида VALUE[N-1] - VALUE[N-2] - ... - VALUE[0]
+			//РІ СЃС‚СЂРѕРєСѓ РІРёРґР° VALUE[N-1] - VALUE[N-2] - ... - VALUE[0]
 		public:
 			System::String ^ToString(void)const
 			{
@@ -1333,11 +1333,11 @@ namespace i
 					return int3;
 				}
 			}
-			//деление Long1 на Long2, результат -Result, остаток - Ostatok
+			//РґРµР»РµРЅРёРµ Long1 РЅР° Long2, СЂРµР·СѓР»СЊС‚Р°С‚ -Result, РѕСЃС‚Р°С‚РѕРє - Ostatok
 		public:
 			static void Divide(const iUInt &Long1,const iUInt &Long2,iUInt &Result,iUInt &Ostatok)
 			{
-				//если делим на 0 - ошибка
+				//РµСЃР»Рё РґРµР»РёРј РЅР° 0 - РѕС€РёР±РєР°
 				if(Long2.N==0)
 				{
 					throw __LINE__;
@@ -1383,9 +1383,9 @@ namespace i
 					}
 					if(i1!=0)
 					{
-						//сдвиг на 1 позицию
+						//СЃРґРІРёРі РЅР° 1 РїРѕР·РёС†РёСЋ
 						Ostatok<<=8;
-						//копирование в конец числа цифры из Long1
+						//РєРѕРїРёСЂРѕРІР°РЅРёРµ РІ РєРѕРЅРµС† С‡РёСЃР»Р° С†РёС„СЂС‹ РёР· Long1
 						Ostatok.VALUE[0]=Long1.VALUE[i1-1];
 						Ostatok.Verify();
 					}
@@ -1511,7 +1511,7 @@ namespace i
 					}
 				}
 			}
-			//НОД
+			//РќРћР”
 		public:
 			void NOD(const iUInt &Long1,const iUInt &Long2)
 			{
@@ -1527,7 +1527,7 @@ namespace i
 				}
 				*this=a;
 			}
-			//конвертирование из 10-значной строки
+			//РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°РЅРёРµ РёР· 10-Р·РЅР°С‡РЅРѕР№ СЃС‚СЂРѕРєРё
 		public:
 			void From10String(System::String^ Number)
 			{
@@ -1550,7 +1550,7 @@ namespace i
 				}
 				*this=result;
 			}
-			//в строку
+			//РІ СЃС‚СЂРѕРєСѓ
 		public:
 			System::String^ To10String(void)
 			{

@@ -1,4 +1,4 @@
-// Chat.cpp : main project file.
+﻿// Chat.cpp : main project file.
 
 #include "stdafx.h"
 #include "_main.h"

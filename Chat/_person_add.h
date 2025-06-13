@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 //'function': signature of non-private member contains assembly private type 'private_type'
 #pragma warning(disable:4677)
 #include "iPerson.h"
@@ -68,7 +68,7 @@ namespace Chat
 			this->__name->Name = L"__name";
 			this->__name->Size = System::Drawing::Size(46, 20);
 			this->__name->TabIndex = 2;
-			this->__name->Text = L"Èìÿ:";
+			this->__name->Text = L"Ð˜Ð¼Ñ:";
 			this->__name->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			// 
 			// __ip
@@ -90,7 +90,7 @@ namespace Chat
 			this->_accept->Name = L"_accept";
 			this->_accept->Size = System::Drawing::Size(94, 24);
 			this->_accept->TabIndex = 4;
-			this->_accept->Text = L"Ïðèíÿòü";
+			this->_accept->Text = L"ÐŸÑ€Ð¸Ð½ÑÑ‚ÑŒ";
 			this->_accept->UseVisualStyleBackColor = true;
 			this->_accept->Click += gcnew System::EventHandler(this, &_person_add::_accept_Click);
 			// 
@@ -103,7 +103,7 @@ namespace Chat
 			this->_cancel->Name = L"_cancel";
 			this->_cancel->Size = System::Drawing::Size(94, 24);
 			this->_cancel->TabIndex = 5;
-			this->_cancel->Text = L"Îòìåíèòü";
+			this->_cancel->Text = L"ÐžÑ‚Ð¼ÐµÐ½Ð¸Ñ‚ÑŒ";
 			this->_cancel->UseVisualStyleBackColor = true;
 			this->_cancel->Click += gcnew System::EventHandler(this, &_person_add::_cancel_Click);
 			// 
@@ -123,7 +123,7 @@ namespace Chat
 			this->Name = L"_person_add";
 			this->ShowInTaskbar = false;
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterParent;
-			this->Text = L"Äîáàâèòü êîíòàêò";
+			this->Text = L"Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÐºÐ¾Ð½Ñ‚Ð°ÐºÑ‚";
 			this->Load += gcnew System::EventHandler(this, &_person_add::_person_add_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();

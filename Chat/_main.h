@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include "iPerson.h"
 #include "iUInt.h"
 #include "iRSA.h"
@@ -13,25 +13,25 @@ namespace Chat
 	//TCP/IP
 	using namespace System::Net;
 	using namespace System::Net::Sockets;
-	//Кодировки
+	//РљРѕРґРёСЂРѕРІРєРё
 	using namespace System::Text;
 	public ref class _main : public System::Windows::Forms::Form
 	{
 	public:
 		static String^ HELPFILE="help.html";
-		//прослушиваемый порт
+		//РїСЂРѕСЃР»СѓС€РёРІР°РµРјС‹Р№ РїРѕСЂС‚
 	public:
 		static const int PORT=14567;
-		//мои ключи
+		//РјРѕРё РєР»СЋС‡Рё
 	public:
 		i::iRSA *MyKey;
-		//ключи собеседника
+		//РєР»СЋС‡Рё СЃРѕР±РµСЃРµРґРЅРёРєР°
 	public: 
 		i::iRSA *YourKey;
-		//с каким контактом соединен
+		//СЃ РєР°РєРёРј РєРѕРЅС‚Р°РєС‚РѕРј СЃРѕРµРґРёРЅРµРЅ
 	public:
 		System::String^ IP_CONNECTED;
-		//безопасный вызов функции из другого потока
+		//Р±РµР·РѕРїР°СЃРЅС‹Р№ РІС‹Р·РѕРІ С„СѓРЅРєС†РёРё РёР· РґСЂСѓРіРѕРіРѕ РїРѕС‚РѕРєР°
 	public:
 		delegate void SetTextCallback(String^ IP,String^ text,Color color);
 	private:
@@ -128,21 +128,21 @@ namespace Chat
 			// 
 			this->_menu_name_add->Name = L"_menu_name_add";
 			this->_menu_name_add->Size = System::Drawing::Size(140, 22);
-			this->_menu_name_add->Text = L"Добавить";
+			this->_menu_name_add->Text = L"Р”РѕР±Р°РІРёС‚СЊ";
 			this->_menu_name_add->Click += gcnew System::EventHandler(this, &_main::_menu_name_add_Click);
 			// 
 			// _menu_name_delete
 			// 
 			this->_menu_name_delete->Name = L"_menu_name_delete";
 			this->_menu_name_delete->Size = System::Drawing::Size(140, 22);
-			this->_menu_name_delete->Text = L"Удалить";
+			this->_menu_name_delete->Text = L"РЈРґР°Р»РёС‚СЊ";
 			this->_menu_name_delete->Click += gcnew System::EventHandler(this, &_main::_menu_name_delete_Click);
 			// 
 			// _menu_name_save
 			// 
 			this->_menu_name_save->Name = L"_menu_name_save";
 			this->_menu_name_save->Size = System::Drawing::Size(140, 22);
-			this->_menu_name_save->Text = L"Сохранить";
+			this->_menu_name_save->Text = L"РЎРѕС…СЂР°РЅРёС‚СЊ";
 			this->_menu_name_save->Click += gcnew System::EventHandler(this, &_main::_menu_name_save_Click);
 			// 
 			// _name_add
@@ -153,7 +153,7 @@ namespace Chat
 			this->_name_add->Name = L"_name_add";
 			this->_name_add->Size = System::Drawing::Size(76, 25);
 			this->_name_add->TabIndex = 2;
-			this->_name_add->Text = L"Добавить";
+			this->_name_add->Text = L"Р”РѕР±Р°РІРёС‚СЊ";
 			this->_name_add->UseVisualStyleBackColor = true;
 			this->_name_add->Click += gcnew System::EventHandler(this, &_main::_name_add_Click);
 			// 
@@ -165,7 +165,7 @@ namespace Chat
 			this->_name_remove->Name = L"_name_remove";
 			this->_name_remove->Size = System::Drawing::Size(76, 25);
 			this->_name_remove->TabIndex = 3;
-			this->_name_remove->Text = L"Удалить";
+			this->_name_remove->Text = L"РЈРґР°Р»РёС‚СЊ";
 			this->_name_remove->UseVisualStyleBackColor = true;
 			this->_name_remove->Click += gcnew System::EventHandler(this, &_main::_name_remove_Click);
 			// 
@@ -192,7 +192,7 @@ namespace Chat
 			this->_name_autosave->Name = L"_name_autosave";
 			this->_name_autosave->Size = System::Drawing::Size(159, 20);
 			this->_name_autosave->TabIndex = 5;
-			this->_name_autosave->Text = L"Автосохранение";
+			this->_name_autosave->Text = L"РђРІС‚РѕСЃРѕС…СЂР°РЅРµРЅРёРµ";
 			this->_name_autosave->UseVisualStyleBackColor = true;
 			// 
 			// _address
@@ -208,7 +208,7 @@ namespace Chat
 			this->_address->Size = System::Drawing::Size(171, 269);
 			this->_address->TabIndex = 6;
 			this->_address->TabStop = false;
-			this->_address->Text = L"Контакты";
+			this->_address->Text = L"РљРѕРЅС‚Р°РєС‚С‹";
 			// 
 			// _generate_key
 			// 
@@ -218,7 +218,7 @@ namespace Chat
 			this->_generate_key->Name = L"_generate_key";
 			this->_generate_key->Size = System::Drawing::Size(171, 29);
 			this->_generate_key->TabIndex = 7;
-			this->_generate_key->Text = L"Подобрать ключ";
+			this->_generate_key->Text = L"РџРѕРґРѕР±СЂР°С‚СЊ РєР»СЋС‡";
 			this->_generate_key->UseVisualStyleBackColor = true;
 			this->_generate_key->Click += gcnew System::EventHandler(this, &_main::_generate_key_Click);
 			// 
@@ -230,7 +230,7 @@ namespace Chat
 			this->_send->Name = L"_send";
 			this->_send->Size = System::Drawing::Size(180, 29);
 			this->_send->TabIndex = 10;
-			this->_send->Text = L"Отправить";
+			this->_send->Text = L"РћС‚РїСЂР°РІРёС‚СЊ";
 			this->_send->UseVisualStyleBackColor = true;
 			this->_send->Click += gcnew System::EventHandler(this, &_main::_send_Click);
 			// 
@@ -257,7 +257,7 @@ namespace Chat
 			this->_connect->Name = L"_connect";
 			this->_connect->Size = System::Drawing::Size(171, 29);
 			this->_connect->TabIndex = 17;
-			this->_connect->Text = L"Соединиться";
+			this->_connect->Text = L"РЎРѕРµРґРёРЅРёС‚СЊСЃСЏ";
 			this->_connect->UseVisualStyleBackColor = true;
 			this->_connect->Click += gcnew System::EventHandler(this, &_main::_connect_Click);
 			// 
@@ -271,7 +271,7 @@ namespace Chat
 			this->_disconnect->Name = L"_disconnect";
 			this->_disconnect->Size = System::Drawing::Size(171, 29);
 			this->_disconnect->TabIndex = 18;
-			this->_disconnect->Text = L"Разъединиться";
+			this->_disconnect->Text = L"Р Р°Р·СЉРµРґРёРЅРёС‚СЊСЃСЏ";
 			this->_disconnect->UseVisualStyleBackColor = true;
 			this->_disconnect->Click += gcnew System::EventHandler(this, &_main::_disconnect_Click);
 			// 
@@ -295,7 +295,7 @@ namespace Chat
 			this->button1->Size = System::Drawing::Size(180, 29);
 			this->button1->TabIndex = 19;
 			this->button1->Tag = L"";
-			this->button1->Text = L"Закодировать и отправить";
+			this->button1->Text = L"Р—Р°РєРѕРґРёСЂРѕРІР°С‚СЊ Рё РѕС‚РїСЂР°РІРёС‚СЊ";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &_main::button1_Click);
 			// 
@@ -316,7 +316,7 @@ namespace Chat
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(180, 29);
 			this->button2->TabIndex = 21;
-			this->button2->Text = L"Декодировать";
+			this->button2->Text = L"Р”РµРєРѕРґРёСЂРѕРІР°С‚СЊ";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &_main::button2_Click);
 			// 
@@ -333,14 +333,14 @@ namespace Chat
 			this->_menu_help->Name = L"_menu_help";
 			this->_menu_help->ShortcutKeyDisplayString = L"";
 			this->_menu_help->Size = System::Drawing::Size(82, 20);
-			this->_menu_help->Text = L"Помощь (F1)";
+			this->_menu_help->Text = L"РџРѕРјРѕС‰СЊ (F1)";
 			this->_menu_help->Click += gcnew System::EventHandler(this, &_main::_menu_help_Click);
 			// 
 			// _menu_about
 			// 
 			this->_menu_about->Name = L"_menu_about";
 			this->_menu_about->Size = System::Drawing::Size(84, 20);
-			this->_menu_about->Text = L"О Программе";
+			this->_menu_about->Text = L"Рћ РџСЂРѕРіСЂР°РјРјРµ";
 			this->_menu_about->Click += gcnew System::EventHandler(this, &_main::_menu_about_Click);
 			// 
 			// _main
@@ -376,16 +376,16 @@ namespace Chat
 
 		}
 #pragma endregion
-		//преобразуем IP в имена согласно контакт-листу
-		//если IP=127.0.0.1 то Я
-		//если такой IP есть в контакт-листе, возвращаем соответствующее имя
-		//если такого IP нет, возвращяем Anonymous(IP)
+		//РїСЂРµРѕР±СЂР°Р·СѓРµРј IP РІ РёРјРµРЅР° СЃРѕРіР»Р°СЃРЅРѕ РєРѕРЅС‚Р°РєС‚-Р»РёСЃС‚Сѓ
+		//РµСЃР»Рё IP=127.0.0.1 С‚Рѕ РЇ
+		//РµСЃР»Рё С‚Р°РєРѕР№ IP РµСЃС‚СЊ РІ РєРѕРЅС‚Р°РєС‚-Р»РёСЃС‚Рµ, РІРѕР·РІСЂР°С‰Р°РµРј СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РµРµ РёРјСЏ
+		//РµСЃР»Рё С‚Р°РєРѕРіРѕ IP РЅРµС‚, РІРѕР·РІСЂР°С‰СЏРµРј Anonymous(IP)
 	private:
 		System::String^ ResolveIP(System::String^ IP)
 		{
 			if(IP=="127.0.0.1")
 			{
-				return "Я";
+				return "РЇ";
 			}
 			for(int i1=0;i1<_name->Items->Count;i1++)
 			{
@@ -394,9 +394,9 @@ namespace Chat
 					return dynamic_cast<iPerson^>(_name->Items[i1])->NAME;
 				}
 			}
-			return "Аnonymous ("+IP+")";
+			return "Рђnonymous ("+IP+")";
 		}
-		//отправить байты data по IP через порт PORT
+		//РѕС‚РїСЂР°РІРёС‚СЊ Р±Р°Р№С‚С‹ data РїРѕ IP С‡РµСЂРµР· РїРѕСЂС‚ PORT
 		void SendBytes(System::String^ IP,array<Byte>^ data)
 		{
 			try
@@ -411,7 +411,7 @@ namespace Chat
 				IP_CONNECTED="";
 			}
 		}
-		//сохранить контакт-лист на HDD
+		//СЃРѕС…СЂР°РЅРёС‚СЊ РєРѕРЅС‚Р°РєС‚-Р»РёСЃС‚ РЅР° HDD
 		void SavePersons(String^ FileName)
 		{
 			array<String^>^ s1=gcnew array<String^>(_name->Items->Count*2);
@@ -426,11 +426,11 @@ namespace Chat
 			}
 			catch(System::Exception^ err)
 			{
-				MessageBox::Show(err->Message,"Ошибка записи в файл",MessageBoxButtons::OK,MessageBoxIcon::Warning);
+				MessageBox::Show(err->Message,"РћС€РёР±РєР° Р·Р°РїРёСЃРё РІ С„Р°Р№Р»",MessageBoxButtons::OK,MessageBoxIcon::Warning);
 				return;
 			};
 		}
-		//загрузить сохраненный контакт-лист с HDD
+		//Р·Р°РіСЂСѓР·РёС‚СЊ СЃРѕС…СЂР°РЅРµРЅРЅС‹Р№ РєРѕРЅС‚Р°РєС‚-Р»РёСЃС‚ СЃ HDD
 		void LoadPersons(String^ FileName)
 		{
 			array<String^>^ s1;
@@ -451,7 +451,7 @@ namespace Chat
 				_name->Items->Add(gcnew iPerson(s1[i1],s1[i1+1]));
 			}
 		}
-		//преобразовать строку в байтовый массив (Serialize)
+		//РїСЂРµРѕР±СЂР°Р·РѕРІР°С‚СЊ СЃС‚СЂРѕРєСѓ РІ Р±Р°Р№С‚РѕРІС‹Р№ РјР°СЃСЃРёРІ (Serialize)
 		array<Byte>^ StringToByte(String^ str)
 		{
 			array<Byte>^ byte=gcnew array<Byte>(str->Length*2);
@@ -462,7 +462,7 @@ namespace Chat
 			}
 			return byte;
 		}
-		//преобразовать байтовый массив в строку (Deserialize)
+		//РїСЂРµРѕР±СЂР°Р·РѕРІР°С‚СЊ Р±Р°Р№С‚РѕРІС‹Р№ РјР°СЃСЃРёРІ РІ СЃС‚СЂРѕРєСѓ (Deserialize)
 		String^ ByteToString(array<Byte>^ byte)
 		{
 			String^ str="";
@@ -472,8 +472,8 @@ namespace Chat
 			}
 			return str;
 		}
-		//прослушивание порта PORT на этом компьютере
-		//при приеме какой-либо информации обработать ее в функции Action
+		//РїСЂРѕСЃР»СѓС€РёРІР°РЅРёРµ РїРѕСЂС‚Р° PORT РЅР° СЌС‚РѕРј РєРѕРјРїСЊСЋС‚РµСЂРµ
+		//РїСЂРё РїСЂРёРµРјРµ РєР°РєРѕР№-Р»РёР±Рѕ РёРЅС„РѕСЂРјР°С†РёРё РѕР±СЂР°Р±РѕС‚Р°С‚СЊ РµРµ РІ С„СѓРЅРєС†РёРё Action
 		void GetMessage()
 		{
 			TcpListener^ server=gcnew TcpListener(IPAddress::Any,PORT);
@@ -483,7 +483,7 @@ namespace Chat
 			{
 				try
 				{
-					//ждать соединения
+					//Р¶РґР°С‚СЊ СЃРѕРµРґРёРЅРµРЅРёСЏ
 					TcpClient^ client = server->AcceptTcpClient();
 					NetworkStream^ stream=client->GetStream();
 					bytes=gcnew array<Byte>(65536);
@@ -497,13 +497,13 @@ namespace Chat
 				}
 			}
 		}
-		//отправить компьютеру IP RSA ключи E и N=P*Q
-		//формат:
-		//6 - 1 байт (для идентификации типа приходящей информации)
-		//длина открытой экспоненты E - 1 байт
-		//открытая экспонента E - 1...255 байт
-		//длина модуля N - 1 байт
-		//модуль N - 1...255 байт
+		//РѕС‚РїСЂР°РІРёС‚СЊ РєРѕРјРїСЊСЋС‚РµСЂСѓ IP RSA РєР»СЋС‡Рё E Рё N=P*Q
+		//С„РѕСЂРјР°С‚:
+		//6 - 1 Р±Р°Р№С‚ (РґР»СЏ РёРґРµРЅС‚РёС„РёРєР°С†РёРё С‚РёРїР° РїСЂРёС…РѕРґСЏС‰РµР№ РёРЅС„РѕСЂРјР°С†РёРё)
+		//РґР»РёРЅР° РѕС‚РєСЂС‹С‚РѕР№ СЌРєСЃРїРѕРЅРµРЅС‚С‹ E - 1 Р±Р°Р№С‚
+		//РѕС‚РєСЂС‹С‚Р°СЏ СЌРєСЃРїРѕРЅРµРЅС‚Р° E - 1...255 Р±Р°Р№С‚
+		//РґР»РёРЅР° РјРѕРґСѓР»СЏ N - 1 Р±Р°Р№С‚
+		//РјРѕРґСѓР»СЊ N - 1...255 Р±Р°Р№С‚
 		void SendKeysEN(String^ IP)
 		{
 			//MessageBox::Show(MyKey->E.ToString(),"E");
@@ -524,14 +524,14 @@ namespace Chat
 			}
 			SendBytes(IP,data);
 		}
-		//типы сообщений (первый байт):
-		//0 - запрос на соединение
-		//1 - разрыв соединения
-		//2 - соединение установлено (в ответ на 0)
-		//3 - соединение разорвано (в ответ на 0)
-		//4 - сообщение
-		//5 - закодированное сообщение
-		//6 - RSA ключи E и N=P*Q
+		//С‚РёРїС‹ СЃРѕРѕР±С‰РµРЅРёР№ (РїРµСЂРІС‹Р№ Р±Р°Р№С‚):
+		//0 - Р·Р°РїСЂРѕСЃ РЅР° СЃРѕРµРґРёРЅРµРЅРёРµ
+		//1 - СЂР°Р·СЂС‹РІ СЃРѕРµРґРёРЅРµРЅРёСЏ
+		//2 - СЃРѕРµРґРёРЅРµРЅРёРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅРѕ (РІ РѕС‚РІРµС‚ РЅР° 0)
+		//3 - СЃРѕРµРґРёРЅРµРЅРёРµ СЂР°Р·РѕСЂРІР°РЅРѕ (РІ РѕС‚РІРµС‚ РЅР° 0)
+		//4 - СЃРѕРѕР±С‰РµРЅРёРµ
+		//5 - Р·Р°РєРѕРґРёСЂРѕРІР°РЅРЅРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ
+		//6 - RSA РєР»СЋС‡Рё E Рё N=P*Q
 		void Action(String^ IP,array<Byte>^ data)
 		{
 			switch(data[0])
@@ -539,7 +539,7 @@ namespace Chat
 			case 0:
 				if(IP_CONNECTED=="")
 				{
-					if(MessageBox::Show("Разрешить соединение c "+ResolveIP(IP)+"?","",MessageBoxButtons::YesNo)==System::Windows::Forms::DialogResult::Yes)
+					if(MessageBox::Show("Р Р°Р·СЂРµС€РёС‚СЊ СЃРѕРµРґРёРЅРµРЅРёРµ c "+ResolveIP(IP)+"?","",MessageBoxButtons::YesNo)==System::Windows::Forms::DialogResult::Yes)
 					{
 						SendBytes(IP,gcnew array<Byte>{2});
 						IP_CONNECTED=IP;
@@ -554,14 +554,14 @@ namespace Chat
 			case 1:
 				if(IP_CONNECTED!="")
 				{
-					MessageBox::Show("Разорвано соединение с "+ResolveIP(IP));
+					MessageBox::Show("Р Р°Р·РѕСЂРІР°РЅРѕ СЃРѕРµРґРёРЅРµРЅРёРµ СЃ "+ResolveIP(IP));
 					IP_CONNECTED="";
 				}
 				break;
 			case 2:
 				if(IP_CONNECTED=="")
 				{
-					MessageBox::Show("Установлено соединение с "+ResolveIP(IP));
+					MessageBox::Show("РЈСЃС‚Р°РЅРѕРІР»РµРЅРѕ СЃРѕРµРґРёРЅРµРЅРёРµ СЃ "+ResolveIP(IP));
 					IP_CONNECTED=IP;
 					SendKeysEN(IP);
 				}
@@ -569,7 +569,7 @@ namespace Chat
 			case 3:
 				if(IP_CONNECTED=="")
 				{
-					MessageBox::Show("Отказано в запросе на соединение с "+ResolveIP(IP));
+					MessageBox::Show("РћС‚РєР°Р·Р°РЅРѕ РІ Р·Р°РїСЂРѕСЃРµ РЅР° СЃРѕРµРґРёРЅРµРЅРёРµ СЃ "+ResolveIP(IP));
 				}
 				break;
 			case 4:
@@ -577,7 +577,7 @@ namespace Chat
 				{
 					int length=((int)data[1])*256+data[2];
 					String^ str=System::Text::Encoding::UTF8->GetString(data,3,length+3);
-					//MessageBox::Show("Получано сообщение от "+ResolveIP(IP)+": "+str);
+					//MessageBox::Show("РџРѕР»СѓС‡Р°РЅРѕ СЃРѕРѕР±С‰РµРЅРёРµ РѕС‚ "+ResolveIP(IP)+": "+str);
 					AddMessage(IP,str,Color::DarkBlue);
 				}
 				break;
@@ -587,14 +587,14 @@ namespace Chat
 					int length=((int)data[1])*256+data[2];
 					String^ str=System::Text::Encoding::UTF8->GetString(data,3,length+3);
 					//String^ str2=MyKey->DecryptAllText(str);
-					//MessageBox::Show("Получано зашифрованное сообщение от "+ResolveIP(IP)+": "+str2);
+					//MessageBox::Show("РџРѕР»СѓС‡Р°РЅРѕ Р·Р°С€РёС„СЂРѕРІР°РЅРЅРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ РѕС‚ "+ResolveIP(IP)+": "+str2);
 					AddMessage(IP,str,Color::DarkBlue);
 				}
 				break;
 			case 6:
 				if(IP_CONNECTED==IP)
 				{
-					//MessageBox::Show("Получены RSA ключи от "+ResolveIP(IP));
+					//MessageBox::Show("РџРѕР»СѓС‡РµРЅС‹ RSA РєР»СЋС‡Рё РѕС‚ "+ResolveIP(IP));
 					delete YourKey;
 					YourKey=new i::iRSA;
 					YourKey->E.Create((int)data[1]);
@@ -617,10 +617,10 @@ namespace Chat
 				System::Windows::Forms::MessageBox::Show("ERROR"+__LINE__);
 			}
 		}
-		//добавить сообщение на главное окно (окно чата)
+		//РґРѕР±Р°РІРёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ РЅР° РіР»Р°РІРЅРѕРµ РѕРєРЅРѕ (РѕРєРЅРѕ С‡Р°С‚Р°)
 		void AddMessage(System::String^ IP,String^ Message,Color color)
 		{
-			//потокобезопасный вызов функции (если необходимо)
+			//РїРѕС‚РѕРєРѕР±РµР·РѕРїР°СЃРЅС‹Р№ РІС‹Р·РѕРІ С„СѓРЅРєС†РёРё (РµСЃР»Рё РЅРµРѕР±С…РѕРґРёРјРѕ)
 			if(this->_message->InvokeRequired)
 			{	
 				SetTextCallback^ d = gcnew SetTextCallback(this,&_main::AddMessage);
@@ -637,7 +637,7 @@ namespace Chat
 				_message->AppendText(Message);
 				_message->AppendText(System::Environment::NewLine);
 				_message->AppendText(System::Environment::NewLine);
-				//прокручивание в конец TextBox'а
+				//РїСЂРѕРєСЂСѓС‡РёРІР°РЅРёРµ РІ РєРѕРЅРµС† TextBox'Р°
 				_message->SelectionStart=i1;
 				_message->SelectionLength=_message->Text->Length;
 				_message->SelectionColor=color;
@@ -646,12 +646,12 @@ namespace Chat
 				//_message->ScrollToCaret();
 			}
 		}
-		//загрузка формы
+		//Р·Р°РіСЂСѓР·РєР° С„РѕСЂРјС‹
 		System::Void _main_Load(System::Object^  sender, System::EventArgs^  e) {
 			LoadPersons("persons.txt");
 			_server->RunWorkerAsync();
 		}
-		//добавление контакта в контакт-лист
+		//РґРѕР±Р°РІР»РµРЅРёРµ РєРѕРЅС‚Р°РєС‚Р° РІ РєРѕРЅС‚Р°РєС‚-Р»РёСЃС‚
 		System::Void _name_add_Click(System::Object^  sender, System::EventArgs^  e) {
 			_person_add ^Form=gcnew _person_add;
 			Form->ShowDialog(this);
@@ -665,7 +665,7 @@ namespace Chat
 			}
 			delete Form;
 		}
-		//удаление контакта из контакт-листа
+		//СѓРґР°Р»РµРЅРёРµ РєРѕРЅС‚Р°РєС‚Р° РёР· РєРѕРЅС‚Р°РєС‚-Р»РёСЃС‚Р°
 		System::Void _name_remove_Click(System::Object^  sender, System::EventArgs^  e) {
 			if(_name->SelectedIndex>=0)
 			{
@@ -677,26 +677,26 @@ namespace Chat
 				SavePersons("persons.txt");
 			}
 		}
-		//выделение контакта в контакт-листе
+		//РІС‹РґРµР»РµРЅРёРµ РєРѕРЅС‚Р°РєС‚Р° РІ РєРѕРЅС‚Р°РєС‚-Р»РёСЃС‚Рµ
 		System::Void _name_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
 			if(_name->SelectedIndex>=0)
 			{
 				_ip->Text=dynamic_cast<iPerson^>(_name->Items[_name->SelectedIndex])->IP;
 			}
 		}
-		//добавление контакта в контакт-лист (контекстная строка)
+		//РґРѕР±Р°РІР»РµРЅРёРµ РєРѕРЅС‚Р°РєС‚Р° РІ РєРѕРЅС‚Р°РєС‚-Р»РёСЃС‚ (РєРѕРЅС‚РµРєСЃС‚РЅР°СЏ СЃС‚СЂРѕРєР°)
 		System::Void _menu_name_add_Click(System::Object^  sender, System::EventArgs^  e) {
 			_name_add_Click(nullptr,nullptr);
 		}
-		//удаление контакта из контакт-листа (контекстная строка)
+		//СѓРґР°Р»РµРЅРёРµ РєРѕРЅС‚Р°РєС‚Р° РёР· РєРѕРЅС‚Р°РєС‚-Р»РёСЃС‚Р° (РєРѕРЅС‚РµРєСЃС‚РЅР°СЏ СЃС‚СЂРѕРєР°)
 		System::Void _menu_name_delete_Click(System::Object^  sender, System::EventArgs^  e) {
 			_name_remove_Click(nullptr,nullptr);
 		}
-		//сохранение контакт-листа
+		//СЃРѕС…СЂР°РЅРµРЅРёРµ РєРѕРЅС‚Р°РєС‚-Р»РёСЃС‚Р°
 		System::Void _menu_name_save_Click(System::Object^  sender, System::EventArgs^  e) {
 			SavePersons("persons.txt");
 		}
-		//генерация ключей
+		//РіРµРЅРµСЂР°С†РёСЏ РєР»СЋС‡РµР№
 		System::Void _generate_key_Click(System::Object^  sender, System::EventArgs^  e) {
 			_key_generate^ Form=gcnew _key_generate;
 			Form->ShowDialog(this);
@@ -712,7 +712,7 @@ namespace Chat
 			}
 			delete Form;
 		}
-		//отправить сообщение
+		//РѕС‚РїСЂР°РІРёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ
 		System::Void _send_Click(System::Object^  sender, System::EventArgs^  e) {
 			if(IP_CONNECTED!="")
 			{
@@ -727,14 +727,14 @@ namespace Chat
 				_text_encode->Text="";
 			}
 		}
-		//соединиться
+		//СЃРѕРµРґРёРЅРёС‚СЊСЃСЏ
 		System::Void _connect_Click(System::Object^  sender, System::EventArgs^  e) {
 			if(_name->SelectedIndex>=0 && IP_CONNECTED=="")
 			{
 				SendBytes(dynamic_cast<iPerson^>(_name->Items[_name->SelectedIndex])->IP,gcnew array<Byte>{0});
 			}
 		}
-		//разъединиться
+		//СЂР°Р·СЉРµРґРёРЅРёС‚СЊСЃСЏ
 		System::Void _disconnect_Click(System::Object^  sender, System::EventArgs^  e) {
 			if(IP_CONNECTED!="")
 			{
@@ -743,11 +743,11 @@ namespace Chat
 				_message->Text="";
 			}
 		}	 
-		//второй поток (прослушивание порта PORT)
+		//РІС‚РѕСЂРѕР№ РїРѕС‚РѕРє (РїСЂРѕСЃР»СѓС€РёРІР°РЅРёРµ РїРѕСЂС‚Р° PORT)
 		System::Void _server_DoWork(System::Object^  sender, System::ComponentModel::DoWorkEventArgs^  e) {
 			GetMessage();
 		}
-		//отображение состояния соединения в заголовке формы
+		//РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ СЃРѕСЃС‚РѕСЏРЅРёСЏ СЃРѕРµРґРёРЅРµРЅРёСЏ РІ Р·Р°РіРѕР»РѕРІРєРµ С„РѕСЂРјС‹
 		System::Void _show_ip_connected_Tick(System::Object^  sender, System::EventArgs^  e) {
 			this->Text="Chat";
 			if(IP_CONNECTED!="")
@@ -761,12 +761,12 @@ namespace Chat
 				_text_encode->Focus();
 			}
 		}
-		//нажатие кнопки закодировать и отправить
+		//РЅР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё Р·Р°РєРѕРґРёСЂРѕРІР°С‚СЊ Рё РѕС‚РїСЂР°РІРёС‚СЊ
 		System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 			String^ str;
 			if(YourKey==nullptr || YourKey->E.Empty()||YourKey->N.Empty())
 			{
-				MessageBox::Show("Не получены ключи","ERROR",MessageBoxButtons::OK,MessageBoxIcon::Error);
+				MessageBox::Show("РќРµ РїРѕР»СѓС‡РµРЅС‹ РєР»СЋС‡Рё","ERROR",MessageBoxButtons::OK,MessageBoxIcon::Error);
 				return;
 			}
 			else
@@ -786,7 +786,7 @@ namespace Chat
 				_text_encode->Text="";
 			}
 		}
-		//отправка сообщений по нажатию клавиш Enter или Ctrl + Enter
+		//РѕС‚РїСЂР°РІРєР° СЃРѕРѕР±С‰РµРЅРёР№ РїРѕ РЅР°Р¶Р°С‚РёСЋ РєР»Р°РІРёС€ Enter РёР»Рё Ctrl + Enter
 		System::Void _text_encode_KeyDown(System::Object^  sender, System::Windows::Forms::KeyEventArgs^  e) {
 			if(e->KeyCode==Keys::Enter)
 			{
@@ -802,23 +802,23 @@ namespace Chat
 				}
 			}
 		}
-		//расшифровка выделенного текста
+		//СЂР°СЃС€РёС„СЂРѕРІРєР° РІС‹РґРµР»РµРЅРЅРѕРіРѕ С‚РµРєСЃС‚Р°
 		System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
-			MessageBox::Show(MyKey->DecryptAllText(_message->SelectedText),"Расшифрованный текст");
+			MessageBox::Show(MyKey->DecryptAllText(_message->SelectedText),"Р Р°СЃС€РёС„СЂРѕРІР°РЅРЅС‹Р№ С‚РµРєСЃС‚");
 		}
-		//открытие файла помощи
+		//РѕС‚РєСЂС‹С‚РёРµ С„Р°Р№Р»Р° РїРѕРјРѕС‰Рё
 		System::Void Form1_HelpR(System::Object^  sender, System::Windows::Forms::HelpEventArgs^  hlpevent) {
 			if(IO::File::Exists(Application::StartupPath+"\\"+HELPFILE))
 			{
 				System::Diagnostics::Process::Start(Application::StartupPath+"\\"+HELPFILE);
 			}
 		}
-		//открытие файла помощи
+		//РѕС‚РєСЂС‹С‚РёРµ С„Р°Р№Р»Р° РїРѕРјРѕС‰Рё
 		System::Void _menu_help_Click(System::Object^  sender, System::EventArgs^  e) {
 			Form1_HelpR(nullptr,nullptr);
 		}
 		System::Void _menu_about_Click(System::Object^  sender, System::EventArgs^  e) {
-			System::Windows::Forms::MessageBox::Show("Здесь могла бы быть ваша реклама ;)","О программе",MessageBoxButtons::OK,MessageBoxIcon::Information);
+			System::Windows::Forms::MessageBox::Show("Р—РґРµСЃСЊ РјРѕРіР»Р° Р±С‹ Р±С‹С‚СЊ РІР°С€Р° СЂРµРєР»Р°РјР° ;)","Рћ РїСЂРѕРіСЂР°РјРјРµ",MessageBoxButtons::OK,MessageBoxIcon::Information);
 		}
 	};
 }

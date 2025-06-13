@@ -1,5 +1,5 @@
-#pragma once
-//форма генерации ключей RSA
+п»ї#pragma once
+//С„РѕСЂРјР° РіРµРЅРµСЂР°С†РёРё РєР»СЋС‡РµР№ RSA
 #include "iRSA.h"
 using namespace System;
 using namespace System::Windows::Forms;
@@ -9,10 +9,10 @@ namespace Chat
 	public ref class _key_generate : public System::Windows::Forms::Form
 	{
 	public:
-		//внешний RSA
+		//РІРЅРµС€РЅРёР№ RSA
 		i::iRSA *RSAExternal;
 	private:
-		//внутренний RSA
+		//РІРЅСѓС‚СЂРµРЅРЅРёР№ RSA
 		i::iRSA *RSAInside;
 	private:
 		System::Windows::Forms::Label^  label2;
@@ -92,7 +92,7 @@ namespace Chat
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(220, 21);
 			this->label1->TabIndex = 2;
-			this->label1->Text = L"Количество цифр:";
+			this->label1->Text = L"РљРѕР»РёС‡РµСЃС‚РІРѕ С†РёС„СЂ:";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			// 
 			// _generate
@@ -103,7 +103,7 @@ namespace Chat
 			this->_generate->Name = L"_generate";
 			this->_generate->Size = System::Drawing::Size(123, 24);
 			this->_generate->TabIndex = 0;
-			this->_generate->Text = L"Подобрать";
+			this->_generate->Text = L"РџРѕРґРѕР±СЂР°С‚СЊ";
 			this->_generate->UseVisualStyleBackColor = true;
 			this->_generate->Click += gcnew System::EventHandler(this, &_key_generate::_generate_Click);
 			// 
@@ -166,7 +166,7 @@ namespace Chat
 			this->__modulus->Name = L"__modulus";
 			this->__modulus->Size = System::Drawing::Size(181, 53);
 			this->__modulus->TabIndex = 9;
-			this->__modulus->Text = L"Модуль (n)=";
+			this->__modulus->Text = L"РњРѕРґСѓР»СЊ (n)=";
 			this->__modulus->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			// 
 			// __exp_private
@@ -178,7 +178,7 @@ namespace Chat
 			this->__exp_private->Name = L"__exp_private";
 			this->__exp_private->Size = System::Drawing::Size(181, 60);
 			this->__exp_private->TabIndex = 14;
-			this->__exp_private->Text = L"Закрытая экспонента (d)=";
+			this->__exp_private->Text = L"Р—Р°РєСЂС‹С‚Р°СЏ СЌРєСЃРїРѕРЅРµРЅС‚Р° (d)=";
 			this->__exp_private->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			// 
 			// __exp_public
@@ -190,7 +190,7 @@ namespace Chat
 			this->__exp_public->Name = L"__exp_public";
 			this->__exp_public->Size = System::Drawing::Size(181, 60);
 			this->__exp_public->TabIndex = 13;
-			this->__exp_public->Text = L"Открытая экспонента (e)=";
+			this->__exp_public->Text = L"РћС‚РєСЂС‹С‚Р°СЏ СЌРєСЃРїРѕРЅРµРЅС‚Р° (e)=";
 			this->__exp_public->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			// 
 			// _exp_private
@@ -221,7 +221,7 @@ namespace Chat
 			this->_accept->Name = L"_accept";
 			this->_accept->Size = System::Drawing::Size(123, 24);
 			this->_accept->TabIndex = 1;
-			this->_accept->Text = L"Принять";
+			this->_accept->Text = L"РџСЂРёРЅСЏС‚СЊ";
 			this->_accept->UseVisualStyleBackColor = true;
 			this->_accept->Click += gcnew System::EventHandler(this, &_key_generate::_accept_Click);
 			// 
@@ -233,7 +233,7 @@ namespace Chat
 			this->_cancel->Name = L"_cancel";
 			this->_cancel->Size = System::Drawing::Size(123, 24);
 			this->_cancel->TabIndex = 2;
-			this->_cancel->Text = L"Отмена";
+			this->_cancel->Text = L"РћС‚РјРµРЅР°";
 			this->_cancel->UseVisualStyleBackColor = true;
 			this->_cancel->Click += gcnew System::EventHandler(this, &_key_generate::_cancel_Click);
 			// 
@@ -258,7 +258,7 @@ namespace Chat
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(220, 21);
 			this->label2->TabIndex = 19;
-			this->label2->Text = L"Количество сведетелей простоты:";
+			this->label2->Text = L"РљРѕР»РёС‡РµСЃС‚РІРѕ СЃРІРµРґРµС‚РµР»РµР№ РїСЂРѕСЃС‚РѕС‚С‹:";
 			this->label2->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			// 
 			// _round
@@ -282,7 +282,7 @@ namespace Chat
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(220, 21);
 			this->label3->TabIndex = 21;
-			this->label3->Text = L"Проверять на простоту до:";
+			this->label3->Text = L"РџСЂРѕРІРµСЂСЏС‚СЊ РЅР° РїСЂРѕСЃС‚РѕС‚Сѓ РґРѕ:";
 			this->label3->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			// 
 			// numericUpDown2
@@ -373,55 +373,55 @@ namespace Chat
 		}
 #pragma endregion
 	private:
-		//загрузка формы
+		//Р·Р°РіСЂСѓР·РєР° С„РѕСЂРјС‹
 		System::Void _key_generate_Load(System::Object^  sender, System::EventArgs^  e) {
 			_round_ValueChanged(nullptr,nullptr);
 			numericUpDown2_ValueChanged(nullptr,nullptr);
 		}
-		//отмена
+		//РѕС‚РјРµРЅР°
 		System::Void _cancel_Click(System::Object^  sender, System::EventArgs^  e) {
 			this->Close();
 		}
-		//нажата кнопка "?"
+		//РЅР°Р¶Р°С‚Р° РєРЅРѕРїРєР° "?"
 		System::Void _question_Click(System::Object^  sender, System::EventArgs^  e) {
-			MessageBox::Show("пара чисел (n,e) образуют открытый ключ, а"+System::Environment::NewLine+"пара (n,d) - закрытый",String::Empty,MessageBoxButtons::OK,MessageBoxIcon::Information);
+			MessageBox::Show("РїР°СЂР° С‡РёСЃРµР» (n,e) РѕР±СЂР°Р·СѓСЋС‚ РѕС‚РєСЂС‹С‚С‹Р№ РєР»СЋС‡, Р°"+System::Environment::NewLine+"РїР°СЂР° (n,d) - Р·Р°РєСЂС‹С‚С‹Р№",String::Empty,MessageBoxButtons::OK,MessageBoxIcon::Information);
 		}
-		//генерация
+		//РіРµРЅРµСЂР°С†РёСЏ
 	public:
 		System::Void _generate_Click(System::Object^  sender, System::EventArgs^  e)
 		{
-			//очищаем поля
+			//РѕС‡РёС‰Р°РµРј РїРѕР»СЏ
 			_p->Text="";
 			_q->Text="";
 			_modulus->Text="";
 			_exp_public->Text="";
 			_exp_private->Text="";
 			Application::DoEvents();
-			//генерация
+			//РіРµРЅРµСЂР°С†РёСЏ
 			i::iRSA RSA;
 			RSA.GeneratePrimeNumbers(static_cast<int>(Math::Round(((double)_digit->Value*0.41524+0.29)/2)),(int)_round->Value,(int)numericUpDown2->Value);
 			RSA.GenerateEDKey(gcnew Random());
 			delete RSAInside;
 			RSAInside=new i::iRSA;
 			*RSAInside=RSA;
-			//заполняем поля
+			//Р·Р°РїРѕР»РЅСЏРµРј РїРѕР»СЏ
 			_p->Text=RSAInside->P.To10String();
 			_q->Text=RSAInside->Q.To10String();
 			_modulus->Text=RSAInside->N.To10String();
 			_exp_public->Text=RSAInside->E.To10String();
 			_exp_private->Text=RSAInside->D.To10String();
 		}
-		//примять
+		//РїСЂРёРјСЏС‚СЊ
 		System::Void _accept_Click(System::Object^  sender, System::EventArgs^  e) {
 			RSAExternal=RSAInside;
 			this->Close();
 		}
-		//изменено кол-во свидетелей простоты
+		//РёР·РјРµРЅРµРЅРѕ РєРѕР»-РІРѕ СЃРІРёРґРµС‚РµР»РµР№ РїСЂРѕСЃС‚РѕС‚С‹
 		System::Void _round_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
-			label4->Text="P < "+Math::Pow(0.25,(double)_round->Value).ToString()+"\r\nВероятность что число составное";
+			label4->Text="P < "+Math::Pow(0.25,(double)_round->Value).ToString()+"\r\nР’РµСЂРѕСЏС‚РЅРѕСЃС‚СЊ С‡С‚Рѕ С‡РёСЃР»Рѕ СЃРѕСЃС‚Р°РІРЅРѕРµ";
 		}
 	private: System::Void numericUpDown2_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
-				 label5->Text="Число проверяется на делимость на числа\r\nот 2 до "+numericUpDown2->Value;
+				 label5->Text="Р§РёСЃР»Рѕ РїСЂРѕРІРµСЂСЏРµС‚СЃСЏ РЅР° РґРµР»РёРјРѕСЃС‚СЊ РЅР° С‡РёСЃР»Р°\r\nРѕС‚ 2 РґРѕ "+numericUpDown2->Value;
 			 }
 	};
 }
